@@ -1,18 +1,9 @@
-# marathon-client [![Build Status](https://travis-ci.org/mohitsoni/marathon-client.png)](https://travis-ci.org/mohitsoni/marathon-client)
+# marathon-client 
 
 This project is a Java library for communicating with Marathon API. At this point this library supports version v2 of Marathon API, please refer [docs](https://mesosphere.github.io/marathon/docs/rest-api.html) for more details.
 
 ## Using marathon-client in your maven project
 
-Add marathon-client as a dependency:
-
-```
-<dependency>
-  <groupId>com.github.mohitsoni</groupId>
-  <artifactId>marathon-client</artifactId>
-  <version>0.4.2</version>
-</dependency>
-```
 
 Please look at [releases](https://github.com/mohitsoni/marathon-client/releases) page for more versions.
 
