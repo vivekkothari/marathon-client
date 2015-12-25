@@ -1,4 +1,4 @@
-# marathon-client 
+# marathon-client [![Build Status](https://travis-ci.org/vivekkothari/marathon-client.svg?branch=master)](https://travis-ci.org/vivekkothari/marathon-client)
 
 This project is a Java library for communicating with Marathon API. At this point this library supports version v2 of Marathon API, please refer [docs](https://mesosphere.github.io/marathon/docs/rest-api.html) for more details.
 
