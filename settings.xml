@@ -11,6 +11,11 @@
          <username>${env.CI_DEPLOY_USERNAME}</username>
          <password>${env.CI_DEPLOY_PASSWORD}</password>
       </server>
+      <server>
+         <id>sonatype-release-staging</id>
+         <username>${env.CI_DEPLOY_USERNAME}</username>
+         <password>${env.CI_DEPLOY_PASSWORD}</password>
+      </server>
    </servers>
    <mirrors />
    <proxies />
