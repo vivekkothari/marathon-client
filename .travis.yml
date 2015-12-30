@@ -9,4 +9,4 @@ script: "[ ${TRAVIS_PULL_REQUEST} = 'false' ] && mvn clean deploy --settings tar
 branches:
   only:
     - develop
- 
+    - master
