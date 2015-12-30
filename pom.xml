@@ -4,7 +4,7 @@
     <groupId>com.github.vivekkothari</groupId>
     <artifactId>marathon-client</artifactId>
     <packaging>jar</packaging>
-    <version>0.4.7-SNAPSHOT</version>
+    <version>0.4.7</version>
     <name>marathon-client</name>
     <description>A Java API client for Mesosphere's Marathon.</description>
     
