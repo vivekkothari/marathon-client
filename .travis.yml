@@ -3,7 +3,5 @@ jdk:
   - oraclejdk8
 
 script:
-  - ls -l
-  - echo "Hello"
-  - mvn deploy -X -Dgpg.passphrase=yourpassphrase --settings settings.xml
+  - mvn deploy -X -Prelease-sign-artifacts  -Dgpg.passphrase=yourpassphrase --settings settings.xml
 
