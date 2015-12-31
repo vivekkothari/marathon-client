@@ -8,13 +8,13 @@
     <name>marathon-client</name>
     <description>A Java API client for Mesosphere's Marathon.</description>
     <url>https://github.com/vivekkothari/marathon-client</url>
-    
+<!--    
     <parent>
 	   <groupId>org.sonatype.oss</groupId>
 	   <artifactId>oss-parent</artifactId>
 	   <version>7</version>
     </parent>
-
+-->
     <scm>
         <tag>master</tag>
 	    <url>git@github.com:vivekkothari/marathon-client.git</url>
@@ -28,7 +28,7 @@
 	       <email>vivekkothari2304@gmail.com</email>
 	   </developer>
     </developers>
-<!--
+
 <distributionManagement>
 	<snapshotRepository>
 		<id>sonatype-nexus-snapshots</id>
@@ -37,12 +37,12 @@
 	</snapshotRepository>
 
 	<repository>
-		<id>sonatype-release-staging</id>
+		<id>sonatype-nexus-staging</id>
 		<name>Sonatype Nexus release repository</name>
 		<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 	</repository>
 </distributionManagement>
--->
+
 
     <dependencies>
         <dependency>
