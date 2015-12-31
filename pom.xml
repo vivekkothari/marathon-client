@@ -89,13 +89,15 @@
 <profiles>
         <profile>
             <id>release-sign-artifacts</id>
+<!--
             <activation>
                 <property>
                     <name>env.performRelease</name>
                     <value>true</value>
                 </property>
             </activation>
-            <build>
+--> 
+           <build>
                 <plugins>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
