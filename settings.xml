@@ -30,7 +30,7 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <properties>
-        <gpg.executable>gpg2</gpg.executable>
+        <gpg.executable>gpg</gpg.executable>
         <gpg.passphrase>${env.PASSPHRASE}</gpg.passphrase>
       </properties>
     </profile>
