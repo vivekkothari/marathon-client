@@ -7,7 +7,28 @@
     <version>0.4.7</version>
     <name>marathon-client</name>
     <description>A Java API client for Mesosphere's Marathon.</description>
+    <url>https://github.com/vivekkothari/marathon-client</url>
     
+    <parent>
+	   <groupId>org.sonatype.oss</groupId>
+	   <artifactId>oss-parent</artifactId>
+	   <version>7</version>
+    </parent>
+
+    <scm>
+        <tag>master</tag>
+	    <url>git@github.com:vivekkothari/marathon-client.git</url>
+	    <connection>scm:git:git@github.com:vivekkothari/marathon-client.git</connection>
+	    <developerConnection>scm:git:git@github.com:vivekkothari/marathon-client.git</developerConnection>
+    </scm>
+
+    <developers>
+	   <developer>
+	       <name>Vivek Kothari</name>
+	       <email>vivekkothari2304@gmail.com</email>
+	   </developer>
+    </developers>
+<!--
 <distributionManagement>
 	<snapshotRepository>
 		<id>sonatype-nexus-snapshots</id>
@@ -21,6 +42,7 @@
 		<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 	</repository>
 </distributionManagement>
+-->
 
     <dependencies>
         <dependency>
@@ -63,6 +85,60 @@
         <feign-version>8.13.0</feign-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+<profiles>
+        <profile>
+            <id>release-sign-artifacts</id>
+            <activation>
+                <property>
+                    <name>performRelease</name>
+                    <value>true</value>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
     <build>
         <plugins>
             <plugin>
@@ -78,18 +154,6 @@
                     </execution>
                 </executions>
             </plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
