@@ -8,13 +8,6 @@
     <name>marathon-client</name>
     <description>A Java API client for Mesosphere's Marathon.</description>
     <url>https://github.com/vivekkothari/marathon-client</url>
-<!--    
-    <parent>
-	   <groupId>org.sonatype.oss</groupId>
-	   <artifactId>oss-parent</artifactId>
-	   <version>7</version>
-    </parent>
--->
     <scm>
         <tag>master</tag>
 	    <url>git@github.com:vivekkothari/marathon-client.git</url>
@@ -89,14 +82,12 @@
 <profiles>
         <profile>
             <id>release-sign-artifacts</id>
-<!--
             <activation>
                 <property>
-                    <name>env.performRelease</name>
+                    <name>performRelease</name>
                     <value>true</value>
                 </property>
             </activation>
---> 
            <build>
                 <plugins>
                     <plugin>
