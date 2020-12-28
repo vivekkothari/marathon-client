@@ -75,7 +75,7 @@
         </license>
     </licenses>
     <properties>
-        <feign-version>8.13.0</feign-version>
+        <feign-version>8.18.0</feign-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
